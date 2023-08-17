@@ -1,6 +1,5 @@
 # Classification of Animal Associated Viruses
 
-![image-2.png](attachment:image-2.png)
 
 **Business Problem**
 

@@ -7,9 +7,11 @@ def duplicate_protein_remover(protein_list):
 
 def single_protein_averager(protein_list):
 
+    letters=['A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V', 'X', 'B', 'J', 'Z']
+
     if protein_list=='0':
         zero_dict={}
-        for p in protein_letters:
+        for p in letters:
             zero_dict[p]=0
         return zero_dict
 
@@ -18,7 +20,7 @@ def single_protein_averager(protein_list):
         final_letter_counts={}
         total_letter_count=0
 
-        for p in protein_letters:
+        for p in letters:
             letter_counts[p]=0
         for protein in protein_list:
             for p in protein:

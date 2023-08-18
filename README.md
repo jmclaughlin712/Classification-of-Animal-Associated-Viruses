@@ -19,11 +19,15 @@ After importing necessary packages and reading in the data, I constructed a data
 
  ### **Feature Engineering**
 
-My approach to creating numeric data was to identify patterns of occurrences within the sequences. For DNA sequences, I looked at patterns of 5, 6, 7,and 8 letters and created binary columns representing whether the sequence contained that pattern or not. Since there is an extremely large number of possible patterns that can occur (4^x, with x being the number of letters in the pattern), I took a random sample of patterns for each respective length. Therefore each time the notebook is ran, the dataset has different columns. Even with random sampling, the run time for the whole notebook is still close to an hour. As a result I have created a shortened version of the notebook on the main branch. This notebook contains a csv file with one iteration of the dataset and its columns. It also uses only a simple neural network, and does not incorporate the larger neural network or any of the XGBoost models which were used to create my final model.
+My approach to creating numeric data was to identify patterns of occurrences within the sequences. For DNA sequences, I looked at patterns of 5, 6, 7,and 8 letters and created binary columns representing whether the sequence contained that pattern or not. Since there is an extremely large number of possible patterns that can occur (4^x, with x being the number of letters in the pattern), I took a random sample of patterns for each respective length. I did the same for protein sequences except I looked at lengths of 1 and 3 only. Each time the notebook is ran, the dataset has different columns. Even with random sampling, the run time for the whole notebook is still close to an hour. 
 
  ### **Preprocessing**
 
 My preprocessing steps were scaling the data and label encoding the target.
+
+### **Statistical Significance**
+
+I checked the training data to see which columns have statistically significant differences between bats, rodents, mosquitos, and ticks. I used an ANOVA test for this. Columns which are not statistically significant will be dropped. This turns out to be less than 1% of the columns, so the vast majority of columns are statistically significant.
 
  ### **Modeling**
 

@@ -38,4 +38,4 @@ As mentioned, my final model is a voting classifier which combines the predictio
 
  ### **Results**
 
-The final model has an accuracy score of about 95.4% and a ROC-AUC score of 0.97.
+The final model has an accuracy score of about 95.4% and a ROC-AUC score of 0.97. Therefore the model is effective at identifying the associated animal species of viruses.
